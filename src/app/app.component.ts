@@ -1,13 +1,30 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'powerbi-bplate';
+  isIframeVisible = false;
+  sellingPrice: number = 0;
+  costPrice: number = 0;
+  quantity: number = 0;
+  offerPercentage: number = 0;
+  profitLoss: number | null = null;
+
+  toggleIframe() {
+    this.isIframeVisible = !this.isIframeVisible;
+  }
+
+  calculateProfitLoss() {
+    // Calculate the offer price if an offer percentage is provided
+    const offerDiscount = this.offerPercentage ? this.sellingPrice * (this.offerPercentage / 100) : 0;
+    const finalSellingPrice = this.sellingPrice - offerDiscount;
+    
+    // Calculate profit or loss
+    const totalCost = this.costPrice * this.quantity;
+    const totalRevenue = finalSellingPrice * this.quantity;
+    this.profitLoss = totalRevenue - totalCost;
+  }
 }

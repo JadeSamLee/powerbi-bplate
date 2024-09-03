@@ -1,0 +1,84 @@
+/* General styling for the calculator and button */
+.calculator {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+  
+  .calculator h2 {
+    margin-top: 0;
+  }
+  
+  .calculator form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .calculator label {
+    margin-top: 10px;
+  }
+  
+  .calculator input {
+    margin-bottom: 10px;
+    padding: 8px;
+    font-size: 16px;
+  }
+  
+  .calculator button {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #17191a;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .calculator button:hover {
+    background-color: #524f52;
+  }
+  
+  .calculator .results {
+    margin-top: 20px;
+  }
+  
+  .calculator p {
+    font-size: 18px;
+  }
+  
+  /* Styling for the dashboard section */
+  .dashboard-container {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+  
+  .dashboard-container h2 {
+    margin-top: 0;
+  }
+  
+  .dashboard-container button {
+    align-items: center;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #191c1a; 
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .dashboard-container button:hover {
+    background-color: #707070; 
+  }
+  
+  .dashboard-container iframe {
+    border: none;
+    border-radius: 8px;
+  }
+  
